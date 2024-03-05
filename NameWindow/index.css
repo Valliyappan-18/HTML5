@@ -1,0 +1,147 @@
+/* Index Page Styles */
+
+@import url("https://fonts.googleapis.com/css2?family=Namdhinggo:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color: #944e63;
+}
+
+body {
+  background-color: rgba(5, 5, 5, 0.594);
+  color: rgb(237, 237, 237);
+  width: 100%;
+}
+
+.container-box {
+  position: relative;
+  height: 590px;
+  font-family: "Namdhinggo", serif;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container-box video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  height: 100vh;
+  width: 100%;
+  z-index: -100;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.content h1 {
+  font-size: 2rem;
+  line-height: 50px;
+  color: #fff;
+}
+.content h1 span {
+  color: var(--color);
+  font-style: italic;
+}
+.content h1 span:nth-of-type(2) {
+  color: #fff;
+}
+
+.content h1 span:nth-of-type(1):hover {
+  box-shadow: 4px 4px 5px var(--color);
+}
+.content h1 span:nth-of-type(2):hover {
+  color: var(--color);
+}
+.container-box a {
+  background-color: transparent;
+  text-decoration: none;
+  border: 2px solid var(--color);
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 20px;
+  width: 250px;
+  text-align: center;
+  color: whitesmoke;
+  text-transform: uppercase;
+}
+
+.container-box a:hover {
+  box-shadow: 4px 2px 5px var(--color);
+}
+.container-box a:visited{
+    background-color: gray;
+}
+
+/* media query css */
+
+@media (min-width: 20em) and (max-width: 40em) {
+  .container-box {
+    height: 100vh;
+    font-weight: 300;
+    padding: 20px;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .content h1 {
+    font-size: 1.5rem;
+    line-height: 40px;
+    text-align: center;
+  }
+  .container-box a {
+    width: 180px;
+  }
+}
+
+@media (min-width: 10em) and (max-width: 19.9em) {
+  .container-box {
+    margin: auto;
+    font-weight: 300;
+    height: 100%;
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+  .container-box .content h1 {
+    font-size: 1em;
+    line-height: 30px;
+    text-align: center;
+  }
+  .container-box a {
+    width: 120px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 9.9em) {
+  .container-box {
+    /* display: none; */
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+  .content h1{
+    font-size: 0.6em;
+    line-height: 25px;
+  }
+  .container-box a{
+    width: 80px;
+    font-size: 10px;
+  }
+}
+
+@media(min-width:40.1em){
+    .container-box .content {
+        /* display: none; */
+        margin-top: 50px;
+    }
+    .container-box a{
+        margin-top: 50px;
+    }
+    
+}
